@@ -1,5 +1,5 @@
 import 'mind-ar/dist/mindar-image.prod.js'
-import 'aframe'
+import 'aframe/dist/aframe-master.js'
 import 'mind-ar/dist/mindar-image-aframe.prod.js'
 
 export default function Aframe () {
