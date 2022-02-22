@@ -3,22 +3,35 @@
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <style>
+      @media only screen and (max-width: 600px) {
+        #marker {
+          display: none
+        }
+      }
+      html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+      }
+    </style>
     <body>
-        <a-scene embedded arjs>
-          <a-marker preset="hiro">
-            <a-entity
-            position="0 0 0"
-            rotation="0 0 0"
-            scale="0.05 0.05 0.05"
-            gltf-model="../image-tracking/nft/trex/scene.gltf"
-            ></a-entity>
-          </a-marker>
-          <a-entity camera></a-entity>
-          <a-box position='-1 0.5 -3' rotation='0 45 0' color='#00ff00'></a-box>
-          <a-sphere position='0 1.25 -5' radius='1.25' color='#EF2D5E'></a-sphere>
-          <a-cylinder position='1 0.75 -3' radius='0.5' height='1.5' color='#FFC65D'></a-cylinder>
-          <a-plane position='0 0 -4' rotation='-90 0 0' width='4' height='4' color='#7BC8A4'></a-plane>
-          <a-sky color='#ECECEC'></a-sky>
-        </a-scene>
+        <div id="marker" style="position: absolute; top: 0; left: 0; z-index: 1000;">
+          <img src="/data/hiro.png" width="400px" />
+        </div>
+        <div style="height: 100%;">
+          <a-scene embedded arjs style="display: block; width: 100%;">
+            <a-marker preset="hiro">
+              <a-entity
+              position="0 0 0"
+              rotation="0 0 0"
+              scale="0.05 0.05 0.05"
+              gltf-model="../image-tracking/nft/trex/scene.gltf"
+              ></a-entity>
+            </a-marker>
+            <a-entity camera></a-entity>
+            <a-box position='0 0 -10' rotation='0 0 0' color='#00ff00'></a-box>
+          </a-scene>
+        </div>
     </body>
 </html>

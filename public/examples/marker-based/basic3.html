@@ -12,18 +12,18 @@
     </style>
     <body>
       <div style="position: absolute; top: 0; left: 0">
-        <img src="/data/hiro.png" width="400px" />
+        <img src="/data/pattern-marker.png" width="400px" />
       </div>
-        <a-scene embedded arjs>
-          <a-marker preset="hiro">
-            <a-entity
-            position="0 0 0"
-            rotation="0 0 0"
-            scale="1 1 1"
-            gltf-model="/data/1x1x1(0x0x0.5).gltf"
-            ></a-entity>
-          </a-marker>
-          <a-entity camera></a-entity>
-        </a-scene>
+      <a-scene embedded arjs>
+        <a-marker type="pattern" url="/data/pattern-marker-1024.patt">
+          <a-entity
+          position="0 0 0"
+          rotation="0 0 0"
+          scale="0.1 0.1 0.1"
+          gltf-model="/data/1x1x1(0x0x0.5).gltf"
+          ></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+      </a-scene>
     </body>
 </html>

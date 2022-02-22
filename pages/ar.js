@@ -8,11 +8,7 @@ const Aframe = dynamic(
 
 export default function Home () {
   return (
-    <>
-      <Aframe />
-
-      <div style={{ position: 'absolute', top: 0, zIndex: 10000, left: 0 }}><a href='/'>home</a></div>
-    </>
+    <Aframe />
   )
   // return (
   //   <>
